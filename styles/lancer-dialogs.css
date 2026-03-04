@@ -15,7 +15,6 @@
     color: #ffffff;
     padding: 12px 16px;
     margin: -8px -8px 16px -8px;
-    border-radius: 4px 4px 0 0;
 }
 
 .lancer-dialog-title {
@@ -58,7 +57,7 @@
 
 .lancer-item-card:hover {
     border-color: #991e2a;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
@@ -107,7 +106,7 @@
 
 .lancer-toggle-card:hover {
     border-color: #991e2a;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .lancer-toggle-card.active {
@@ -150,7 +149,7 @@
 
 .lancer-scaling-card:hover {
     border-color: #991e2a;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
@@ -242,7 +241,7 @@
 .lancer-action-btn:hover {
     background: #ffe0e0;
     border-color: #991e2a;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
@@ -307,7 +306,7 @@
 .lancer-list-item:hover {
     background: #ffe0e0;
     border-color: #991e2a;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .lancer-list-item.selected {
@@ -331,4 +330,25 @@
 
 .lancer-fw-600 {
     font-weight: 600;
+}
+
+/* ===== No-Title Window Header (red header, hidden title text) ===== */
+.lancer-no-title .window-header {
+    background: #991e2a;
+    color: #fff;
+    border: none !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+}
+
+.lancer-no-title .window-header .window-title {
+    font-size: 0 !important;
+}
+
+.lancer-no-title .window-header .close {
+    color: #fff;
+}
+
+.lancer-no-title .window-header .close:hover {
+    color: #ffc0c0;
 }
