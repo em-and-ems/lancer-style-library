@@ -340,3 +340,78 @@
 .lancer-fw-600 {
     font-weight: 600;
 }
+
+/* ===== Multi-Select Dropdown (.la-multi-select) ===== */
+/* A button-triggered checkbox panel that looks like a native <select>. */
+/* Usage: <div class="la-multi-select"><button class="la-multi-select-trigger">…</button><div class="la-multi-select-panel"><label><input type="checkbox" value="…"> …</label></div></div> */
+
+.la-multi-select {
+    position: relative;
+    flex: 1;
+}
+
+.la-multi-select-trigger {
+    all: unset;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 26px;
+    background-color: #f5f5f5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23555'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    background-size: 8px 5px;
+    border: 2px solid #999;
+    border-radius: 4px;
+    color: #000;
+    font-size: 0.9em;
+    font-family: inherit;
+    padding: 0 24px 0 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: border-color 0.2s ease;
+}
+
+.la-multi-select-trigger:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.la-multi-select-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #999;
+    min-width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 4px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.la-multi-select-panel.open {
+    display: block;
+}
+
+.la-multi-select-panel label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    font-size: 0.9em;
+    font-family: inherit;
+    font-weight: normal !important;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #000;
+}
+
+.la-multi-select-panel label:hover {
+    background: rgba(0, 0, 0, 0.07);
+}
