@@ -2,7 +2,7 @@
     "id": "lancer-style-library",
     "title": "Lancer Style Library",
     "description": "Shared UI styles library for Lancer modules - provides consistent dialog styles across multiple Lancer-related modules",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "compatibility": {
         "minimum": "11",
         "verified": "12"

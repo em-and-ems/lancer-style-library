@@ -415,3 +415,28 @@
 .la-multi-select-panel label:hover {
     background: rgba(0, 0, 0, 0.07);
 }
+
+/* ===== Scrollbar ===== */
+.lancer-scroll,
+.lancer-dialog-base, .lancer-dialog-base * {
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--primary-color) transparent !important;
+}
+.lancer-scroll::-webkit-scrollbar,
+.lancer-dialog-base::-webkit-scrollbar, .lancer-dialog-base *::-webkit-scrollbar {
+    width: 8px !important;
+    background: transparent !important;
+}
+.lancer-scroll::-webkit-scrollbar-track,
+.lancer-dialog-base::-webkit-scrollbar-track, .lancer-dialog-base *::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+.lancer-scroll::-webkit-scrollbar-thumb,
+.lancer-dialog-base::-webkit-scrollbar-thumb, .lancer-dialog-base *::-webkit-scrollbar-thumb {
+    background: var(--primary-color) !important;
+    border-radius: 4px !important;
+}
+.lancer-scroll::-webkit-scrollbar-thumb:hover,
+.lancer-dialog-base::-webkit-scrollbar-thumb:hover, .lancer-dialog-base *::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--primary-color), white 20%) !important;
+}
