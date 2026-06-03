@@ -474,7 +474,8 @@
     text-shadow: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    filter: none !important;
+    /* PATCH: disabled - was stripping Annoying's drop-shadow glow effects. */
+    /* filter: none !important; */
     -webkit-text-stroke: 0 !important;
 }
 .la-common.lancer .header-actions button i {
@@ -487,18 +488,22 @@
 .la-common.lancer .uses-hex,
 .la-common.lancer .la-loaded-hex,
 .la-common.lancer .charged-hex {
-    color: var(--la-text, #fff) !important;
+    /* PATCH: disabled - --la-text resolves dark on light manufacturer themes. */
+    /* color: var(--la-text, #fff) !important; */
     background-color: transparent !important;
     background: transparent !important;
     box-shadow: none !important;
     border: 0 !important;
     outline: 0 !important;
 }
+/* PATCH: disabled - --la-text resolves dark on light manufacturer themes.
 .la-common.lancer .la-hasegroup .la-flexcol > button,
 .la-common.lancer .la-hasegroup .la-flexcol > .la-label__span {
     color: var(--la-text, #fff) !important;
 }
+*/
 
+/* PATCH: disabled - mega revert-layer block stripped vars Annoying needs for theming.
 .la-common.lancer, .la-common.lancer * {
     --active-input-bg-color: revert-layer !important;
     --av-height: revert-layer !important;
@@ -1074,10 +1079,13 @@
     --visibility-gm-bg: revert-layer !important;
     --visibility-owner-bg: revert-layer !important;
 }
+*/
 
+/* PATCH: disabled - --la-text resolves dark on light manufacturer themes.
 .la-common.lancer .la-number-weapon__span {
     color: var(--la-text, #fff) !important;
 }
+*/
 
 .la-common.lancer button,
 .la-common.lancer button:disabled,
@@ -1097,4 +1105,42 @@
     opacity: 1 !important;
     filter: none !important;
     box-shadow: none !important;
+}
+
+/* PATCH: restore manufacturer bg on Annoying's flow buttons (ATTACK, DAMAGE,
+   trigger labels) - rule 9 above strips bg from every button which hid these. */
+.la-common.lancer button.la-flow.la-bckg-secondary { background-color: var(--la-secondary) !important; }
+.la-common.lancer button.la-flow.la-bckg-primary   { background-color: var(--la-primary)   !important; }
+.la-common.lancer button.la-flow.la-bckg-tertiary  { background-color: var(--la-tertiary)  !important; }
+.la-common.lancer button.la-flow.la-bckg-accent    { background-color: var(--la-accent)    !important; }
+.la-common.lancer button.la-flow.la-bckg-background{ background-color: var(--la-background)!important; }
+
+/* PATCH: force white on stat number spans (HASE, weapon stats, bottom). */
+.la-common.lancer .la-value__span,
+.la-common.lancer .la-number-weapon__span,
+.la-common.lancer .la-bottom__span {
+    color: #fff !important;
+}
+/* PATCH: kill HASE halo. */
+.la-common.lancer .la-value__span {
+    filter: none !important;
+}
+
+/* PATCH: force white on counter/clock hex buttons (clock segments under counters). */
+.la-common.lancer .la-counterbox__button {
+    color: #fff !important;
+}
+
+/* PATCH: force white on Annoying's "add" buttons (mdi-plus-* family). The icon
+   sits directly on the button so the button's inherited dark color shows through. */
+.la-common.lancer button.mdi[class*="mdi-plus"] {
+    color: #fff !important;
+}
+
+/* PATCH: force white on weapon-area icons (range, damage, action buttons, ellipsis). */
+.la-common.lancer .la-summary i,
+.la-common.lancer .la-properties i,
+.la-common.lancer .la-range i,
+.la-common.lancer .la-damage i {
+    color: #fff !important;
 }
