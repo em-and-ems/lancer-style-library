@@ -2,7 +2,7 @@
     "id": "lancer-style-library",
     "title": "Lancer Style Library",
     "description": "Shared UI styles library for Lancer modules - provides consistent dialog styles across multiple Lancer-related modules",
-    "version": "1.1.2",
+    "version": "1.1.1",
     "compatibility": {
         "minimum": "12",
         "verified": "13"
@@ -22,6 +22,6 @@
         ]
     },
     "url": "https://github.com/Agraael/lancer-style-library",
-    "manifest": "https://github.com/Agraael/lancer-style-library/releases/download/1.1.2/module.json",
-    "download": "https://github.com/Agraael/lancer-style-library/releases/download/1.1.2/module.zip"
+    "manifest": "https://github.com/Agraael/lancer-style-library/releases/download/1.1.1/module.json",
+    "download": "https://github.com/Agraael/lancer-style-library/releases/download/1.1.1/module.zip"
 }
